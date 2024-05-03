@@ -1,37 +1,29 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import cors from 'cors'
-import router from './routes/user.route.js'
-let app = express()
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import router from './routes/user.route.js';
 
+const app = express();
 
+// CORS configuration
+app.use(cors({
+  origin: ['https://link-tree-front-end-one.vercel.app'],
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 
-
-app.use(cors(
-  {
-      origin: ["https://link-tree-front-end-one.vercel.app/"],
-      methods: ["POST", "GET"],
-      credentials: true
-  }
-));
-app.use(express.json())
-
-
+app.use(express.json());
 
 try {
-  mongoose.connect('mongodb+srv://ansari:alfahad@assignments.cniqwxv.mongodb.net/UserData')
-  console.log('connected');
+  await mongoose.connect('mongodb+srv://ansari:alfahad@assignments.cniqwxv.mongodb.net/UserData');
+  console.log('Connected to MongoDB');
 } catch (error) {
-  console.log('error', error);
+  console.error('Error connecting to MongoDB:', error);
 }
 
-
-// define router
-app.use('/user', router)
-
-
-
+// Define router
+app.use('/user', router);
 
 app.listen(2000, () => {
-  console.log('Example app listening on port 2000');
+  console.log('Server is running on port 2000');
 });
