@@ -1,0 +1,28 @@
+li a{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+
+img{
+    transition: 0.6s;
+}
+
+#img1:hover{
+  
+    transform: matrix(0.866,0.7,-0.8,0.866,0,0);    
+    
+}
+
+#img2:hover{
+
+    transform: skew(30deg,30deg);
+}
+
+#img3:hover{
+    transform: scale(1.1);
+}
+#img4:hover{
+    transform: rotateY(360deg);
+}
