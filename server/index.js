@@ -7,7 +7,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: ['https://link-tree-front-end-one.vercel.app'],
+  origin: 'https://link-tree-front-end-one.vercel.app',
   methods: ['POST', 'GET'],
   credentials: true
 }));
