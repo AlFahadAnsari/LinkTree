@@ -10,7 +10,7 @@ const Second = () => {
 
                 <div className='w-full md:w-1/2 mt-0  md:mt-40'>
                        
-                       <img src="https://source.unsplash.com/1000x700/?nature,animal" className='px-8 mt-15 md:p-20 ' alt="hii" id='img2' />
+                       <img src="https://source.unsplash.com/1000x700/?nature,animal" className='px-8 mt-10 md:mt-0 md:p-20 ' alt="hii" id='img2' />
    
    
                        </div>
