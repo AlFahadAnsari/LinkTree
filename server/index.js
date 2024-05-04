@@ -15,12 +15,13 @@ try {
   console.error('Error connecting to MongoDB:', error);
 }
 
-// Define router
-app.use('/user', router);
 
 app.get('/',(req,res)=>{
   res.send('hii i am home page')
   )
+
+// Define router
+app.use('/user', router);
 
 app.listen(2000, () => {
   console.log('Server is running on port 2000');
