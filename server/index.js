@@ -5,15 +5,7 @@ import router from './routes/user.route.js';
 
 const app = express();
 
-// CORS configuration
-const corsOptions = {
-  origin: 'https://link-tree-front-end-one.vercel.app',
-  methods: ['GET', 'POST'], 
-  optionsSuccessStatus: 200 
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors();
 app.use(express.json());
 
 try {
