@@ -6,11 +6,13 @@ import router from './routes/user.route.js';
 const app = express();
 
 // CORS configuration
-app.use(cors({
+const corsOptions = {
   origin: 'https://link-tree-front-end-one.vercel.app',
-  methods: ['POST', 'GET'],
-  credentials: true
-}));
+  methods: ['GET', 'POST'], 
+  optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
@@ -23,6 +25,10 @@ try {
 
 // Define router
 app.use('/user', router);
+
+app.get('/',(req,res)=>{
+  res.send('hii i am home page')
+  )
 
 app.listen(2000, () => {
   console.log('Server is running on port 2000');
