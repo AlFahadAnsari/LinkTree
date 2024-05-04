@@ -5,8 +5,15 @@ import router from './routes/user.route.js';
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+
+app.use(cors(
+    {
+        origin: ["https://link-tree-front-end-one.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+app.use(express.json())
 
 try {
   await mongoose.connect('mongodb+srv://ansari:alfahad@assignments.cniqwxv.mongodb.net/UserData');
