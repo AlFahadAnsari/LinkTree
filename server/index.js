@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: ["https://link-tree-front-end-one.vercel.app"],
+        origin: [""],
         methods: ["POST", "GET"],
         credentials: true
     }
