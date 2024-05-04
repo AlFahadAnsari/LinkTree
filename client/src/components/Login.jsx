@@ -17,7 +17,7 @@ const Login = () => {
     };
   
     try {
-      const response = await axios.post('https://link-tree-api.vercel.app//user/login', userInfo);
+      const response = await axios.post('https://link-tree-api.vercel.app/user/login', userInfo);
       if (response.data) {
         if (response.data.success) {
           toast.success('Login Successful!');
